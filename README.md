@@ -1,4 +1,4 @@
-# Studio di fattibilità per un ChatBot per l'assistenza clienti
+![](/docs/resources/graphics.png)
 
 ## Premessa
 
