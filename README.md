@@ -6,3 +6,10 @@ Questo studio si pone l'obbiettivo di valutare la possibilità di implementazion
 
 Lo studio verrà svolto nel corso di due settimane.
 Se possibile si proverà ad implementare un chatbot per esplorare l'utilità di questo sistema.
+
+## Obiettivi
+
+- [ ] Scrivere un documento esplorativo delle potenzialità del sistema.
+- [ ] Identificare le tecnologie più adatte al sistema.
+- [ ] Definire un [Tech-Stack](/docs/dictionary/tech-stack.md) per il sistema.
+- [ ] Implementare un sistema funzionante.
