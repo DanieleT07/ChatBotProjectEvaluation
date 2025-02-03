@@ -29,3 +29,6 @@ Michele T.
 Boatopack
 - [Website](https://www.boatopack.com/)
 - [Email](mailto:info@boatopack.com)
+
+---
+[Home](/indice.md) [Dizionario](/docs/dictionary/indice.md)
