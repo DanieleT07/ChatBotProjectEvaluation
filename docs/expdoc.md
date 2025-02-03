@@ -19,6 +19,18 @@ L'utilizzo di chatbot per l'assistenza alla clientela è nei recenti anni divent
 
 **Contro:**
 - Complessità del sistema
-- Possibilità si [Allucinazione](/docs/dictionary/allucinazione.md)
+- Possibilità di [Allucinazione](/docs/dictionary/allucinazione.md)
 - Limitazione dovute alla non completezza della documentazione
 - Rischio di fornire informazioni errate
+
+
+## Esempi di Società che utilizzano chatbot per l'assistenza clienti
+
+1. Amazon
+2. Bank of America
+3. HealthTap
+4. Marriott International
+5. H&M
+
+Queste sono alcune società che hanno implementato chatbot negli ultimi anni.
+Spicca molto Amazon, essendo tralatro proprietaria di [*AWS*](https://aws.amazon.com/), una delle più grandi piattaforme di hosting cloud, e quindi molto interessata a questo mercato.
