@@ -7,6 +7,8 @@ Questo studio si pone l'obbiettivo di valutare la possibilità di implementazion
 Lo studio verrà svolto nel corso di due settimane.
 Se possibile si proverà ad implementare un chatbot per esplorare l'utilità di questo sistema.
 
+[Indice](/indice.md)
+
 ## Obiettivi
 
 - [ ] Scrivere un [documento esplorativo](/docs/expdoc.md) delle potenzialità del sistema.

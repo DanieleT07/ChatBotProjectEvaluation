@@ -15,7 +15,7 @@ L'utilizzo di chatbot per l'assistenza alla clientela è nei recenti anni divent
 - Riduzione dei tempi di attesa
 - Supporto 24/7
 - Riduzione della barriera linguistica
-- Riduzione delle possibilità di fraintendimento alla comunicazione
+- Riduzione delle possibilità di fraintendimento dovuto alla comunicazione
 
 **Contro:**
 - Complessità del sistema
