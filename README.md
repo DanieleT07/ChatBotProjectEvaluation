@@ -13,3 +13,19 @@ Se possibile si proverà ad implementare un chatbot per esplorare l'utilità di 
 - [ ] Identificare le tecnologie più adatte al sistema.
 - [ ] Definire un [Tech-Stack](/docs/dictionary/tech-stack.md) per il sistema.
 - [ ] Implementare un sistema funzionante.
+
+## Contatti
+
+### Stagista responsabile dello studio
+Daniele T.
+- [Github](https://github.com/DanieleT07)
+- [Email](mailto:danieletoniolo7@gmail.com)
+
+### Tutor di stage
+Michele T.
+- [Email](mailto:usa3@boatopack.com)
+
+### Azienda ospitante
+Boatopack
+- [Website](https://www.boatopack.com/)
+- [Email](mailto:info@boatopack.com)
