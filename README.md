@@ -9,7 +9,7 @@ Se possibile si proverà ad implementare un chatbot per esplorare l'utilità di 
 
 ## Obiettivi
 
-- [ ] Scrivere un documento esplorativo delle potenzialità del sistema.
+- [ ] Scrivere un [documento esplorativo](/docs/expdoc.md) delle potenzialità del sistema.
 - [ ] Identificare le tecnologie più adatte al sistema.
 - [ ] Definire un [Tech-Stack](/docs/dictionary/tech-stack.md) per il sistema.
 - [ ] Implementare un sistema funzionante.
