@@ -8,7 +8,7 @@ RAG (Retrieval-augmented generation) è un approccio per la generazione di testi
 graph TD;
     A[User Query] -->|Input| B[Componente di ricerca];
     B -->|Ricerca nella documentazione| C[Documenti significativi];
-    C -->|Generazione| D[Contesto augmentato];
+    C -->|Generazione| D[Contesto aumentato];
     D -->|Utilizzo come prompt| E[Processamento LLM];
     E -->|Generazione| F[Risposta finale];
     F -->|Restituisce a| A;
