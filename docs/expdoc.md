@@ -34,3 +34,5 @@ L'utilizzo di chatbot per l'assistenza alla clientela è nei recenti anni divent
 
 Queste sono alcune società che hanno implementato chatbot negli ultimi anni.
 Spicca molto Amazon, essendo tralatro proprietaria di [*AWS*](https://aws.amazon.com/), una delle più grandi piattaforme di hosting cloud, e quindi molto interessata a questo mercato.
+
+## Implementazione
