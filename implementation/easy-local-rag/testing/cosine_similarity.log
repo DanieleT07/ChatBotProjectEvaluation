@@ -1,0 +1,68 @@
+String 1: Father
+String 2: Mother
+Cosine Similarity Score: 0.673081636428833
+==================================================
+String 1: Grandfather
+String 2: Grandmother
+Cosine Similarity Score: 0.7670682668685913
+==================================================
+String 1: Brother
+String 2: Sister
+Cosine Similarity Score: 0.7191728353500366
+==================================================
+String 1: Sister
+String 2: Brother
+Cosine Similarity Score: 0.7191728353500366
+==================================================
+String 1: Brother
+String 2: Father
+Cosine Similarity Score: 0.6791247129440308
+==================================================
+String 1: Sister
+String 2: Mother
+Cosine Similarity Score: 0.6040663123130798
+==================================================
+String 1: Green
+String 2: Grass
+Cosine Similarity Score: 0.7433421015739441
+==================================================
+String 1: Blue
+String 2: Sky
+Cosine Similarity Score: 0.6794981956481934
+==================================================
+String 1: Ice
+String 2: Cold
+Cosine Similarity Score: 0.7600221037864685
+==================================================
+String 1: Fire
+String 2: Hot
+Cosine Similarity Score: 0.6917775273323059
+==================================================
+String 1: Sun
+String 2: Light
+Cosine Similarity Score: 0.735995352268219
+==================================================
+String 1: Ocean
+String 2: Wave
+Cosine Similarity Score: 0.7097770571708679
+==================================================
+String 1: Moon
+String 2: Night
+Cosine Similarity Score: 0.695264458656311
+==================================================
+String 1: Tree
+String 2: Leaf
+Cosine Similarity Score: 0.6847411394119263
+==================================================
+String 1: Snow
+String 2: Cold
+Cosine Similarity Score: 0.7451398968696594
+==================================================
+String 1: Music
+String 2: Harmony
+Cosine Similarity Score: 0.674578070640564
+==================================================
+String 1: Music
+String 2: Harmony
+Cosine Similarity Score: 0.674578070640564
+==================================================
