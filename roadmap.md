@@ -28,3 +28,7 @@ Sono riuscito a far funzionare il RAG, ma ancora non ho tutto implementato.
 Ho anche riscritto un po' di documentazione.
 
 #### Pomeriggio
+
+Ho studiato l'implementazione di Easy Local RAG e ho realizzato degli esempi di utilizzo.
+Ho aggiunto 2 strumenti, uno 3d e uno 2d, per visualizzare la distanza vettoriale tra due stringhe.
+Ho cominciato a studiare Embedding, Vettorializzazione e Cosine Similarity.
