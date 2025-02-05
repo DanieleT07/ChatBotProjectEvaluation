@@ -9,7 +9,7 @@ graph TD;
     A[User Query] -->|Input| B[Componente di ricerca];
     B -->|Ricerca nella documentazione| C[Documenti significativi];
     C -->|Generazione| D[Contesto aumentato];
-    D -->|Utilizzo come prompt| E[Processamento LLM];
+    D -->|Utilizzo come prompt| E[LLM];
     E -->|Generazione| F[Risposta finale];
     F -->|Restituisce a| A;
 ```

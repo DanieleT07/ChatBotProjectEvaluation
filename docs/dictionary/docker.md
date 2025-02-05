@@ -2,6 +2,12 @@
 
 [*Wikipedia*](https://en.wikipedia.org/wiki/Docker_(software))
 
+## In breve
+
+Docker è una piattaforma per creare, distribuire e gestire applicazioni in **container**, che sono ambienti isolati e portabili. Ogni container include tutto ciò che serve per eseguire un'applicazione: codice, runtime, librerie e dipendenze.  
+
+## Spiegazione estesa
+
 Docker è una piattaforma per creare, distribuire e gestire applicazioni in **container**, che sono ambienti isolati e portabili. Ogni container include tutto ciò che serve per eseguire un'applicazione: codice, runtime, librerie e dipendenze.  
 
 #### **Vantaggi di Docker:**  
@@ -29,6 +35,7 @@ services:
       MYSQL_ROOT_PASSWORD: example
 ```
 
+### **Differenza tra VM, Bare Metal e Docker**
 Il seguente schema spiega la differenza tra l'esecuzione di software su Bare Metal (Direttamente su un device con OS installato), su un sistema di VM (macchine virtuali) e su un Docker (container).
 
 #### Bare Metal

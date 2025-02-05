@@ -2,6 +2,12 @@
 
 [*Wikipedia*](https://en.wikipedia.org/wiki/Chatbot)
 
+## In breve
+
+Chatbot è un sistema informatico capace di interagire con l'utente in modo simile a un conversatore.
+
+## Spiegazione estesa
+
 In questo contesto definiamo come chatbot un sistema informatico capace di interagire con l'utente in modo simile a un conversatore.
 
 Possono essere considerate implementazioni di chatbot sistemi come [*Assistente Google*](https://assistant.google.com/) e [*ChatGPT*](https://openai.com/index/chatgpt/).
