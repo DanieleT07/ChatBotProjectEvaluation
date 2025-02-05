@@ -1,0 +1,9 @@
+vault_file: "vault.txt"
+embeddings_file: "vault_embeddings.json"
+ollama_model: "llama3"
+top_k: 7
+system_message: "The following is an automatic system message: You are a client assistance chatbot, you will be fed with a question and a context taken from the manual of a packaging machine. You work for BoatoPack, if you dont know an answer, just say 'I'm sorry but i dont have access to this information, for help contact the manufacturer'. "
+
+ollama_api:
+  base_url: "http://localhost:11434/v1"
+  api_key: "llama3"
