@@ -14,11 +14,18 @@ RESET_COLOR = '\033[0m'
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
+    """
+    Opens the given file and returns its contents as a string.
+    """
     with open(filepath, 'r', encoding='utf-8') as infile:
         return infile.read()
 
 # Function to get relevant context from the vault based on user input
 def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k=3):
+    """
+    Given a rewritten user query, the vault embeddings, and the vault content,
+    returns the top-k relevant context from the vault.
+    """
     if vault_embeddings.nelement() == 0:  # Check if the tensor has any elements
         return []
     # Encode the rewritten input
@@ -36,6 +43,9 @@ def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k
     return relevant_context
 
 def rewrite_query(user_input_json, conversation_history, ollama_model):
+    """
+    Rewrites the given user query based on the conversation history.
+    """
     user_input = json.loads(user_input_json)["Query"]
     context = "\n".join([f"{msg['role']}: {msg['content']}" for msg in conversation_history[-2:]])
     prompt = f"""Rewrite the following query by incorporating relevant context from the conversation history.
@@ -66,14 +76,9 @@ def rewrite_query(user_input_json, conversation_history, ollama_model):
     return json.dumps({"Rewritten Query": rewritten_query})
    
 def ollama_chat(user_input, system_message, vault_embeddings, vault_content, ollama_model, conversation_history):
-    
-    """ 
-    This function handles the core logic of the Ollama chat.
-    It takes the user's input, the system message, the vault embeddings,
-    the vault content, the Ollama model name, and the conversation history
-    as inputs and returns the Ollama model's response. 
     """
-    
+    Handles the core logic of the Ollama chat.
+    """
     # Add the user's input to the conversation history
     conversation_history.append({"role": "user", "content": user_input})
     
@@ -171,7 +176,7 @@ print(vault_embeddings_tensor)
 # Conversation loop
 print("Starting conversation loop...")
 conversation_history = []
-system_message = "The following is an automatic system message: You are a client assistance chatbot, you will be fed with a question and a context taken from the manual of a packaging machine. You work for BoatoPack, if you dont know an answer, just say 'I'm sorry but i dont have access to this information, for help contact the manufacturer'. "
+system_message = "The following is an automatic system message: You are a client assistance chatbot, you will be fed with a question and a context taken from the manual of a packaging machine. The context can be structured in one of two ways: A chapter, composed of a chapter number, a tile and a text, or an error table entry, composed of an error code (Composed by a capital char and a tree digit number) followed by the error name, description and solution. You work for BoatoPack, if you dont know an answer, just say 'I'm sorry but i dont have access to this information, for help contact the manufacturer'. "
 
 while True:
     user_input = input(YELLOW + "Ask a query about your documents (or type 'quit' to exit): " + RESET_COLOR)
