@@ -4,6 +4,7 @@ import os
 from openai import OpenAI
 import argparse
 import json
+import re
 
 # ANSI escape codes for colors
 PINK = '\033[95m'
@@ -11,6 +12,10 @@ CYAN = '\033[96m'
 YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
+
+vault_path = "vault.txt"
+vault_old_path = "vault_old.txt"
+embeddings_path = "embeddings.json"
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
@@ -20,12 +25,69 @@ def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
         return infile.read()
 
+def find_matching_lines(file_path, input_string):
+    # Find all occurrences of the patterns in the input string
+    matches = re.findall(r'\b(?:A?\d{3}|a\d{3})\b', input_string)
+    
+    # Extract only the numeric part from the matches
+    codes = {int(m[-3:]) for m in matches}  # Extracts the last 3 digits as integers
+
+    line_numbers = []
+    
+    with open(file_path, 'r', encoding='utf-8') as file:
+        for i, line in enumerate(file, start=1):
+            found = False
+            
+            # Check for direct matches like Axxx
+            if any(re.search(rf'\bA{code}\b', line) for code in codes):
+                line_numbers.append(i)
+                found = True  # Flag to continue checking other matches
+            
+            # Check for range matches like Axxx/yyy
+            ranges = re.findall(r'A(\d{3})/(\d{3})', line)
+            for start, end in ranges:
+                if any(int(start) <= code <= int(end) for code in codes):
+                    line_numbers.append(i)
+                    found = True  # Flag to continue checking other matches
+            
+            if found:
+                continue  # Continue to the next line to find all matches
+
+    return sorted(set(line_numbers))  # Remove duplicates and sort
+
+def get_lines_from_file(line_numbers, file_path):
+    """
+    Given a list of line numbers and a file path, return the corresponding lines from the file.
+    
+    :param line_numbers: List of integers representing line numbers (1-based index)
+    :param file_path: Path to the file
+    :return: List of strings containing the corresponding lines
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+        
+        return [lines[i - 1].rstrip('\n') for i in line_numbers if 1 <= i <= len(lines)]
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
+        return []
+    except Exception as e:
+        print(f"Error: {e}")
+        return []
+
 # Function to get relevant context from the vault based on user input
 def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k=3):
     """
     Given a rewritten user query, the vault embeddings, and the vault content,
     returns the top-k relevant context from the vault.
     """
+    control = False
+    line_numbers = find_matching_lines(vault_path, rewritten_input)
+    if line_numbers != []:
+        control = True
+        relevant_context_strict = get_lines_from_file(line_numbers, vault_path)
+    else:
+        relevant_context_strict = []
     if vault_embeddings.nelement() == 0:  # Check if the tensor has any elements
         return []
     # Encode the rewritten input
@@ -39,7 +101,12 @@ def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k
     # Sort the scores and get the top-k indices
     top_indices = torch.topk(cos_scores, k=top_k)[1].tolist()
     # Get the corresponding context from the vault
-    relevant_context = [vault_content[idx].strip() for idx in top_indices]
+    relevant_context_loose = [vault_content[idx].strip() for idx in top_indices]
+    if control == True:
+        relevant_context = relevant_context_strict
+    else:
+        relevant_context = relevant_context_loose
+
     return relevant_context
 
 def rewrite_query(user_input_json, conversation_history, ollama_model):
@@ -145,6 +212,29 @@ def load_system_message():
     with open("system_message.txt", "r", encoding='utf-8') as f:
         return f.read()
 
+def check_different_embeddings(vault_old_path, vault_path):
+    with open(vault_old_path, "r", encoding='utf-8') as f:
+        old_content = f.read()
+    with open(vault_path, "r", encoding='utf-8') as f:
+        new_content = f.read()
+    return old_content != new_content
+
+def save_old_embeddings(embeddings_path, embeddings):
+    with open(embeddings_path, "w", encoding='utf-8') as f:
+        json.dump(embeddings, f)
+
+def load_old_embeddings(embeddings_path):
+    with open(embeddings_path, "r", encoding='utf-8') as f:
+        return json.load(f)
+
+def save_old_vault(vault_path, vault_content):
+    with open(vault_old_path, "w", encoding='utf-8') as f:
+        #clean the file
+        f.write("")
+    with open(vault_old_path, "a", encoding='utf-8') as f:
+        for line in vault_content:
+            f.write(line)
+
 
 # Parse command-line arguments
 print(NEON_GREEN + "Parsing command-line arguments..." + RESET_COLOR)
@@ -162,16 +252,22 @@ client = OpenAI(
 # Load the vault content
 print(NEON_GREEN + "Loading vault content..." + RESET_COLOR)
 vault_content = []
-if os.path.exists("vault.txt"):
-    with open("vault.txt", "r", encoding='utf-8') as vault_file:
+if os.path.exists(vault_path):
+    with open(vault_path, "r", encoding='utf-8') as vault_file:
         vault_content = vault_file.readlines()
 
 # Generate embeddings for the vault content using Ollama
 print(NEON_GREEN + "Generating embeddings for the vault content..." + RESET_COLOR)
 vault_embeddings = []
-for content in vault_content:
-    response = ollama.embeddings(model='mxbai-embed-large', prompt=content)
-    vault_embeddings.append(response["embedding"])
+
+if check_different_embeddings(vault_old_path, vault_path):
+    for content in vault_content:
+        response = ollama.embeddings(model='mxbai-embed-large', prompt=content)
+        vault_embeddings.append(response["embedding"])
+else:
+    vault_embeddings = load_old_embeddings(embeddings_path)
+
+
 
 # Convert to tensor and print embeddings
 print("Converting embeddings to tensor...")
@@ -187,6 +283,8 @@ system_message = load_system_message()
 while True:
     user_input = input(YELLOW + "Ask a query about your documents (or type 'quit' to exit): " + RESET_COLOR)
     if user_input.lower() == 'quit':
+        save_old_embeddings(embeddings_path, vault_embeddings)
+        save_old_vault(vault_path, vault_content)
         break
     
     response = ollama_chat(user_input, system_message, vault_embeddings_tensor, vault_content, args.model, conversation_history)

@@ -66,7 +66,18 @@ def visualize_sentences(sentences):
 
 # Example usage
 sentences = [
-    "Planet",
+    "man",
+    "woman",
+    "male",
+    "female",
+    "king",
+    "queen",
+    "boy",
+    "girl",
+]
+
+
+'''    "Planet",
     "Earth",
     "Moon",
     "Sun",
@@ -260,5 +271,6 @@ sentences = [
     "Performance",
           
 ]
+'''
 
 visualize_sentences(sentences)
