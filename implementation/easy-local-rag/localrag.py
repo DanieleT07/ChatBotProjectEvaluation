@@ -48,7 +48,7 @@ def rewrite_query(user_input_json, conversation_history, ollama_model):
     """
     user_input = json.loads(user_input_json)["Query"]
     context = "\n".join([f"{msg['role']}: {msg['content']}" for msg in conversation_history[-2:]])
-    prompt = f"""Rewrite the following query by incorporating relevant context from the conversation history.
+    prompt = f"""Rewrite the following query by incorporating relevant context from the conversation history, but only if the new query is related to the history.
     The rewritten query should:
     
     - Preserve the core intent and meaning of the original query
@@ -58,7 +58,7 @@ def rewrite_query(user_input_json, conversation_history, ollama_model):
     
     Return ONLY the rewritten query text, without any additional formatting or explanations.
     
-    Conversation History:
+    Conversation History (exclude the following message if it doesn't provide relevant information for the new query):
     {context}
     
     Original query: [{user_input}]
@@ -140,6 +140,12 @@ def ollama_chat(user_input, system_message, vault_embeddings, vault_content, oll
     # Return the Ollama model's response
     return response.choices[0].message.content
 
+
+def load_system_message():
+    with open("system_message.txt", "r", encoding='utf-8') as f:
+        return f.read()
+
+
 # Parse command-line arguments
 print(NEON_GREEN + "Parsing command-line arguments..." + RESET_COLOR)
 parser = argparse.ArgumentParser(description="Ollama Chat")
@@ -176,7 +182,7 @@ print(vault_embeddings_tensor)
 # Conversation loop
 print("Starting conversation loop...")
 conversation_history = []
-system_message = "The following is an automatic system message: You are a client assistance chatbot, you will be fed with a question and a context taken from the manual of a packaging machine. The context can be structured in one of two ways: A chapter, composed of a chapter number, a tile and a text, or an error table entry, composed of an error code (Composed by a capital char and a tree digit number) followed by the error name, description and solution. You work for BoatoPack, if you dont know an answer, just say 'I'm sorry but i dont have access to this information, for help contact the manufacturer'. "
+system_message = load_system_message()
 
 while True:
     user_input = input(YELLOW + "Ask a query about your documents (or type 'quit' to exit): " + RESET_COLOR)
@@ -185,3 +191,5 @@ while True:
     
     response = ollama_chat(user_input, system_message, vault_embeddings_tensor, vault_content, args.model, conversation_history)
     print(NEON_GREEN + "Response: \n\n" + response + RESET_COLOR)
+
+

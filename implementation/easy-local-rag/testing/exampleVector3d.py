@@ -7,6 +7,8 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 from matplotlib.colors import Normalize
 
+debug = True
+
 def plot_4d_embeddings(embeddings, labels):
     """
     Plots embeddings in a 3D space with color representing a fourth dimension (PCA Component 4).
@@ -48,6 +50,17 @@ def plot_4d_embeddings(embeddings, labels):
     # Show plot
     plt.show()
 
+    if debug:
+        with open('log.log', "a") as log:
+            log.write(f"Labels: [")
+            for i, label in enumerate(labels):
+                log.write(f"'°{label}', ")
+            log.write(f"]\n")
+            log.write(f"X: {x}\n")
+            log.write(f"Y: {y}\n")
+            log.write(f"Z: {z}\n")
+            log.write(f"C: {c}\n")
+
 def get_sentence_embedding(sentence):
     """
     Get embedding for a single sentence using Ollama model.
@@ -65,6 +78,8 @@ def visualize_sentences_4d(sentences):
     # Get embeddings for each sentence
     for sentence in sentences:
         embedding = get_sentence_embedding(sentence)
+        print(embedding)
+        quit()
         embeddings.append(embedding)
         labels.append(sentence)
 
@@ -121,8 +136,8 @@ sentences = [
     "Peace",
     "War",
     "Victory",
-    "Defeat",
-    "King",
+    "Defeat",]
+'''    "King",
     "Queen",
     "Prince",
     "Princess",
@@ -266,6 +281,6 @@ sentences = [
     "Audition",
     "Performance",
           
-]
+ ]'''
 
 visualize_sentences_4d(sentences)
