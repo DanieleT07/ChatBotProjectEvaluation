@@ -16,6 +16,7 @@ RESET_COLOR = '\033[0m'
 vault_path = "vault.txt"
 vault_old_path = "vault_old.txt"
 embeddings_path = "embeddings.json"
+top_k_var = 5
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
@@ -76,7 +77,7 @@ def get_lines_from_file(line_numbers, file_path):
         return []
 
 # Function to get relevant context from the vault based on user input
-def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k=3):
+def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k=top_k_var):
     """
     Given a rewritten user query, the vault embeddings, and the vault content,
     returns the top-k relevant context from the vault.
@@ -86,6 +87,7 @@ def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k
     if line_numbers != []:
         control = True
         relevant_context_strict = get_lines_from_file(line_numbers, vault_path)
+        rewritten_input = rewritten_input.join(relevant_context_strict)
     else:
         relevant_context_strict = []
     if vault_embeddings.nelement() == 0:  # Check if the tensor has any elements
@@ -102,11 +104,13 @@ def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k
     top_indices = torch.topk(cos_scores, k=top_k)[1].tolist()
     # Get the corresponding context from the vault
     relevant_context_loose = [vault_content[idx].strip() for idx in top_indices]
+    '''
     if control == True:
         relevant_context = relevant_context_strict
     else:
         relevant_context = relevant_context_loose
-
+    '''
+    relevant_context = [*relevant_context_strict, *relevant_context_loose]
     return relevant_context
 
 def rewrite_query(user_input_json, conversation_history, ollama_model):
