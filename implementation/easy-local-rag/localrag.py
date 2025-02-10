@@ -5,6 +5,7 @@ from openai import OpenAI
 import argparse
 import json
 import re
+import yaml
 
 # ANSI escape codes for colors
 PINK = '\033[95m'
@@ -13,10 +14,19 @@ YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
 
-vault_path = "vault.txt"
-vault_old_path = "vault_old.txt"
-embeddings_path = "embeddings.json"
-top_k_var = 5
+config_path = "config.yaml"
+config = yaml.safe_load(open(config_path, 'r'))
+
+# Loading of variables from the config file
+top_k_var = config['top_k']
+system_message = config['system_message']
+embeding_model = config['ollama_model_emebeding']
+embeddings_path = config['embeddings_file']
+ollama_api = config['ollama_api_base_url']
+vault_path = config['vault_file']
+vault_old_path = config['vault_old_file']
+ollama_model = config['ollama_model']
+ollama_api_key = config['ollama_api_key']
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
@@ -57,13 +67,10 @@ def find_matching_lines(file_path, input_string):
     return sorted(set(line_numbers))  # Remove duplicates and sort
 
 def get_lines_from_file(line_numbers, file_path):
-    """
-    Given a list of line numbers and a file path, return the corresponding lines from the file.
-    
-    :param line_numbers: List of integers representing line numbers (1-based index)
-    :param file_path: Path to the file
-    :return: List of strings containing the corresponding lines
-    """
+    # Given a list of line numbers and a file path, return the corresponding lines from the file.
+    # :param line_numbers: List of integers representing line numbers (1-based index)
+    # :param file_path: Path to the file
+    # :return: List of strings containing the corresponding lines
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             lines = file.readlines()
@@ -78,10 +85,8 @@ def get_lines_from_file(line_numbers, file_path):
 
 # Function to get relevant context from the vault based on user input
 def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k=top_k_var):
-    """
-    Given a rewritten user query, the vault embeddings, and the vault content,
-    returns the top-k relevant context from the vault.
-    """
+    # Given a rewritten user query, the vault embeddings, and the vault content,
+    # returns the top-k relevant context from the vault.
     control = False
     line_numbers = find_matching_lines(vault_path, rewritten_input)
     if line_numbers != []:
@@ -93,7 +98,7 @@ def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k
     if vault_embeddings.nelement() == 0:  # Check if the tensor has any elements
         return []
     # Encode the rewritten input
-    input_embedding = ollama.embeddings(model='mxbai-embed-large', prompt=rewritten_input)["embedding"]
+    input_embedding = ollama.embeddings(model=embeding_model, prompt=rewritten_input)["embedding"]
     # Compute cosine similarity between the input and vault embeddings
     cos_scores = torch.cosine_similarity(torch.tensor(input_embedding).unsqueeze(0), vault_embeddings)
     # Adjust top_k if it's greater than the number of available scores
@@ -104,19 +109,11 @@ def get_relevant_context(rewritten_input, vault_embeddings, vault_content, top_k
     top_indices = torch.topk(cos_scores, k=top_k)[1].tolist()
     # Get the corresponding context from the vault
     relevant_context_loose = [vault_content[idx].strip() for idx in top_indices]
-    '''
-    if control == True:
-        relevant_context = relevant_context_strict
-    else:
-        relevant_context = relevant_context_loose
-    '''
     relevant_context = [*relevant_context_strict, *relevant_context_loose]
     return relevant_context
 
 def rewrite_query(user_input_json, conversation_history, ollama_model):
-    """
-    Rewrites the given user query based on the conversation history.
-    """
+    # Rewrites the given user query based on the conversation history.
     user_input = json.loads(user_input_json)["Query"]
     context = "\n".join([f"{msg['role']}: {msg['content']}" for msg in conversation_history[-2:]])
     prompt = f"""Rewrite the following query by incorporating relevant context from the conversation history, but only if the new query is related to the history.
@@ -147,9 +144,7 @@ def rewrite_query(user_input_json, conversation_history, ollama_model):
     return json.dumps({"Rewritten Query": rewritten_query})
    
 def ollama_chat(user_input, system_message, vault_embeddings, vault_content, ollama_model, conversation_history):
-    """
-    Handles the core logic of the Ollama chat.
-    """
+    # Handles the core logic of the Ollama chat.
     # Add the user's input to the conversation history
     conversation_history.append({"role": "user", "content": user_input})
     
@@ -212,10 +207,6 @@ def ollama_chat(user_input, system_message, vault_embeddings, vault_content, oll
     return response.choices[0].message.content
 
 
-def load_system_message():
-    with open("system_message.txt", "r", encoding='utf-8') as f:
-        return f.read()
-
 def check_different_embeddings(vault_old_path, vault_path):
     with open(vault_old_path, "r", encoding='utf-8') as f:
         old_content = f.read()
@@ -243,14 +234,14 @@ def save_old_vault(vault_path, vault_content):
 # Parse command-line arguments
 print(NEON_GREEN + "Parsing command-line arguments..." + RESET_COLOR)
 parser = argparse.ArgumentParser(description="Ollama Chat")
-parser.add_argument("--model", default="llama3", help="Ollama model to use (default: llama3)")
+parser.add_argument("--model", default=ollama_model, help="Ollama model to use (default: llama3)")
 args = parser.parse_args()
 
 # Configuration for the Ollama API client
 print(NEON_GREEN + "Initializing Ollama API client..." + RESET_COLOR)
 client = OpenAI(
-    base_url='http://localhost:11434/v1',
-    api_key='llama3'
+    base_url=ollama_api,
+    api_key=ollama_api_key
 )
 
 # Load the vault content
@@ -266,7 +257,7 @@ vault_embeddings = []
 
 if check_different_embeddings(vault_old_path, vault_path):
     for content in vault_content:
-        response = ollama.embeddings(model='mxbai-embed-large', prompt=content)
+        response = ollama.embeddings(model=embeding_model, prompt=content)
         vault_embeddings.append(response["embedding"])
 else:
     vault_embeddings = load_old_embeddings(embeddings_path)
@@ -282,7 +273,6 @@ print(vault_embeddings_tensor)
 # Conversation loop
 print("Starting conversation loop...")
 conversation_history = []
-system_message = load_system_message()
 
 while True:
     user_input = input(YELLOW + "Ask a query about your documents (or type 'quit' to exit): " + RESET_COLOR)
