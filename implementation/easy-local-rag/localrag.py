@@ -178,12 +178,14 @@ def ollama_chat(user_input, system_message, vault_embeddings, vault_content, oll
     # Get the relevant context from the vault based on the rewritten query
     relevant_context = get_relevant_context(rewritten_query, vault_embeddings, vault_content)
 
-    if not benchmark:
-        # If relevant context is found, print it
-        if relevant_context:
-            context_str = "\n".join(relevant_context)
+    
+    # If relevant context is found, print it
+    if relevant_context:
+        context_str = "\n".join(relevant_context)
+        if not benchmark:
             print("Context Pulled from Documents: \n\n" + CYAN + context_str + RESET_COLOR)
-        else:
+    else:
+        if not benchmark:
             print(CYAN + "No relevant context found." + RESET_COLOR)
     
     # Add the relevant context to the user's input
