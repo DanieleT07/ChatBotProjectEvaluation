@@ -14,6 +14,12 @@ YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
 
+benchmark = True
+if benchmark:
+    benchmark_path = "benchmark.yaml"
+    benchmark_content = yaml.safe_load(open(benchmark_path, 'r'))
+    benchmark_questions = benchmark_content['questions']
+
 config_path = "config.yaml"
 config = yaml.safe_load(open(config_path, 'r'))
 
@@ -162,20 +168,23 @@ def ollama_chat(user_input, system_message, vault_embeddings, vault_content, oll
         # Get the rewritten query
         rewritten_query = rewritten_query_data["Rewritten Query"]
         # Print the original query and the rewritten query
-        print(PINK + "Original Query: " + user_input + RESET_COLOR)
-        print(PINK + "Rewritten Query: " + rewritten_query + RESET_COLOR)
+        if not benchmark:
+            print(PINK + "Original Query: " + user_input + RESET_COLOR)
+            print(PINK + "Rewritten Query: " + rewritten_query + RESET_COLOR)
     else:
         # If the conversation history has only one item, use the original query
         rewritten_query = user_input
     
     # Get the relevant context from the vault based on the rewritten query
     relevant_context = get_relevant_context(rewritten_query, vault_embeddings, vault_content)
-    # If relevant context is found, print it
-    if relevant_context:
-        context_str = "\n".join(relevant_context)
-        print("Context Pulled from Documents: \n\n" + CYAN + context_str + RESET_COLOR)
-    else:
-        print(CYAN + "No relevant context found." + RESET_COLOR)
+
+    if not benchmark:
+        # If relevant context is found, print it
+        if relevant_context:
+            context_str = "\n".join(relevant_context)
+            print("Context Pulled from Documents: \n\n" + CYAN + context_str + RESET_COLOR)
+        else:
+            print(CYAN + "No relevant context found." + RESET_COLOR)
     
     # Add the relevant context to the user's input
     user_input_with_context = user_input
@@ -273,6 +282,20 @@ print(vault_embeddings_tensor)
 # Conversation loop
 print("Starting conversation loop...")
 conversation_history = []
+
+if benchmark:
+    response_list = []
+    for question in benchmark_questions:
+        user_input = question
+        response = ollama_chat(user_input, system_message, vault_embeddings_tensor, vault_content, args.model, conversation_history)
+        conversation_history = []
+        print(NEON_GREEN + "Response: \n\n" + response + RESET_COLOR)
+        response_list.append(response)
+        # write response_list to response.txt alternating with question
+        with open("response.txt", "a", encoding='utf-8') as f:
+            f.write("Question: " + question + "\n")
+            f.write("Response: " + response + "\n")
+
 
 while True:
     user_input = input(YELLOW + "Ask a query about your documents (or type 'quit' to exit): " + RESET_COLOR)

@@ -1,0 +1,39 @@
+questions:
+- How do I align the bands?  
+- How do I adjust the dosing phase?  
+- How do I adjust the transverse cut?  
+- How do I adjust the vertical cut?  
+- How do I align the feeding tubes?  
+- What should I do in case of leaks?  
+- How do I adjust the brand photocell?  
+- How do I align the bands on the sealing rollers?  
+- How do I adjust the knife to cut correctly?  
+- How do I set the machine's zero point?  
+- How do I adjust the pressure of rollers and jaws?  
+- How do I replace the bearings of rollers and jaws?  
+- How do I change the reel?  
+- How do I adjust the film joint photocell?  
+- How do I clean the sealing units?  
+- How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE PRINTER
+- How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE JAWS
+- How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE FILM
+- How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE KNIFE
+- How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE DOSER
+- How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE STRIP
+- How can we resolve this alarm? ALARM PRINTER DEVICE NOT READY
+- How can we resolve this alarm? ALARM PRINTER HOMING TIMEOUT
+- How can we resolve this alarm? ALARM PRINTER OVERTRAVEL
+- How can we resolve this alarm? ALARM DOSER HOMING TIMEOUT
+- How can we resolve this alarm? ALARM DOSER MOVEMENT TIMEOUT
+- How can we resolve this alarm? ALARM DOSER OUT OF LINE
+- How can we resolve this alarm? PSU OVERLOAD ALARM
+- How can we resolve this alarm? ETHERCAT NETWORK COMMUNICATION ALARM
+- How can we resolve this alarm? SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC
+- How can we resolve this alarm? SYSTEM MAJOR ALARMS (AXES) - CHECK DIAGNOSTIC
+- Why machine is not moving in manual mode?
+- Why machine is not moving after switch on?
+- Why machine is not moving after switching from manual mode to automatic mode?
+- Doser is enabled and in line, but it does not move, why?
+- The sachets are leaking product, how can I fix it?
+- The reel unwinder does not move properly, we often have alarms related to it, what can I do?
+- When i change some parameter on the panel the machine doesn't react. what can be the problem?
