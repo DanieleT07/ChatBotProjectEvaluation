@@ -1,9 +1,9 @@
 ollama_api_base_url: "http://localhost:11434/v1"
-ollama_api_key: "llama3"
+ollama_api_key: "llama3.1"
 vault_file: "vault.txt"
 vault_old_file: "vault_old.txt"
 embeddings_file: "embeddings.json"
-ollama_model: "llama3"
+ollama_model: "llama3.1"
 ollama_model_emebeding: "mxbai-embed-large"
 top_k: 7
 system_message: |-

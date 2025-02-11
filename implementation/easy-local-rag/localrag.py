@@ -14,7 +14,7 @@ YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
 
-benchmark = True
+benchmark = False
 if benchmark:
     benchmark_path = "benchmark.yaml"
     benchmark_content = yaml.safe_load(open(benchmark_path, 'r'))
