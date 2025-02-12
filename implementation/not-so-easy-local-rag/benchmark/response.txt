@@ -1,0 +1,587 @@
+Question: How do I align the bands?
+Response: It appears that you have a document related to the operation and maintenance of a packing machine, likely used for packaging food or pharmaceutical products. Here's a summary of the content:
+
+**Machine Components**
+
+The document mentions various components of the packing machine, including:
+
+1. Path adjustment rollers: permit independent adjustment of the path of front and rear sides of the wrapping material.
+2. Doser: a device that measures and dispenses the product into individual sachets.
+3. Deviator: a system involved in sampling and controlling the production line.
+
+**Settings and Adjustments**
+
+The document explains how to adjust and set various parameters, including:
+
+1. Path adjustment rollers: can be adjusted independently for front and rear sides of the wrapping material.
+2. End of reel sensor (optional): detects the end of the film roll and is adjustable from the operator panel.
+3. Blade devices: control and are related to the presence of reels.
+4. Reel centering photocells: support adjusting the border of reels.
+
+**Security Warnings**
+
+The document includes safety warnings and cautions:
+
+1. **Warning! Crush hazard**: associated with moving parts or heavy objects within the machine.
+2. **Warning! Blade danger**: emphasizes the danger posed by the cutting blades used in the machine.
+3. **Safety footwear, protective gloves and eye protection are required**.
+
+**Operator Controls**
+
+The document describes various operator controls, including:
+
+1. Button options for auto-sampling, manual sampling, and always offline operation.
+2. Function keys for belt control (e.g., pulling rolls, infeed), which allow the operator to access specific pages related to these sub-systems.
+3. Setting parameters for the packing machine (deviator settings) and display of actual values.
+
+**Alarm Messages**
+
+There are a few alarm messages mentioned:
+
+1. **A238 - STRIP SYNC ALARM**: indicates an unsynchronized axis and requires the homing procedure to be performed.
+2. A message related to reel tracking may indicate low levels or improper alignment, suggesting adjustments should be made for proper operation.
+
+This document appears to be part of comprehensive guide book outlining maintenance procedures, safety guidelines, and operational settings for packaging machine users.
+Question: How do I adjust the dosing phase?
+Response: To adjust the dosing phase, you need to access the relevant page on your machine's control panel.
+
+According to the provided context, there are several pages related to dosing and packaging settings. To specify which one you should adjust, could you please provide more information about what you're trying to achieve? For example:
+
+- Are you trying to adjust the timing of a specific phase during the dosing process?
+- Do you want to change how your machine handles different phases, such as switching from online to off-line or vice versa?
+- Are there problems with synchronization between phases?
+
+Here are some general steps based on common practice in similar machinery:
+
+1. **Access the Packing Page**: Navigate to the page that controls packing settings (possibly Screen 19 - Packing page). This is where phase adjustments for dosing and packaging might be found.
+
+2. **Locate the Phase Adjustment Options**: Look for sections labeled "DEVIATOR ON LINE PHASE" or similar, which indicate the doser activation timing relative to the machine's cycle phases. These phases can often be customized via numerical inputs (like specific mm values) that are incremented based on certain conditions or manual input.
+
+3. **Adjust as Directed**: Enter new phase timings into any existing "numeric adjustment" fields related to these labels. Be mindful of units and logical adjustments that match your desired operation outcome, such as incrementing the timer when a condition is met.
+
+4. **Review Changes and Adjust If Necessary**: Save changes made to phase settings. Check to ensure they operate as intended before making further adjustments if needed for precision dosing.
+
+Given the complexity and potential variety of controls on more modern machinery, it's always best to consult your device manufacturer’s manual or official instructions for exact steps tailored to your equipment.
+
+If you have any specific questions about adjusting the dosing phase based on your device model, precise requirements would be most helpful in providing an accurate step-by-step guide.
+Question: How do I adjust the transverse cut?
+Response: It looks like you have a manual for an industrial packaging machine, likely used in manufacturing or production settings. The document appears to be a comprehensive guide covering various aspects of the machine's operation, configuration, and maintenance.
+
+Here are some key aspects and features highlighted in the provided text:
+
+1.  **Machine Configuration and Controls**: The manual covers different sections of the machine, including "Mark Page," "Knife Page," "Heaters Page," and more. Each section outlines functions, settings, and controls related to that specific area.
+2.  **User Interface**: The user interface is described in detail, with various buttons (e.g., "SET", "RESET", "HOME") and boxes for inputting speeds, bag lengths, and other parameters. These elements are crucial for the machine's operation and must be understood correctly by users.
+3.  **Performance Monitoring**: The manual includes information on how to monitor the machine's performance through various counters (partially, totally filled bags, etc.) and temperature indicators. This is critical for detecting any anomalies in production.
+4.  **Mark Control and Film Joint Function**: Specifically for applications where film length affects production, the "mark page" section details options like enabling or disabling the joint function, mark phase detection, and adjusting parameters to center images on sachets properly.
+5.  **Tight Tolerance Requirements**: Some functions require a high degree of accuracy, such as setting bag lengths with slight variations expected due to the machine's tolerances (especially for mark positioning and bag length adjustments).
+
+In summary, this manual is a detailed technical guide designed for maintenance personnel or operators needing in-depth knowledge about operating, configuring, and troubleshooting these complex industrial machines.
+Question: How do I adjust the vertical cut?
+Response: This is an extremely lengthy and complex document detailing various aspects of a packaging machine's setup and adjustment procedures. I'll attempt to provide a concise overview, highlighting key sections:
+
+**General Safety Precautions**
+
+Throughout the document, there are numerous warnings emphasizing the need for caution when performing adjustments or repairs on the machine.
+
+**Reel Centering Adjustment (A169)
+
+1.  Ensure that the alignment photocell is properly positioned.
+2. Move the unwinder manually if the automatic reel centring has reached its limit.
+
+**Path Adjustment Rollers**
+
+*   These allow independent adjustment of the front and rear path of the wrapping material to match printing on each sachet.
+
+**Sachet Guide Rollers (Optional)**
+
+*   These rollers guide sachets onto a conveyor belt in the sealing system's final section.
+    *   The document mentions Figure 34 for reference, but it is not included here.
+
+**Knife and Transversal Perforation Knife (Strip)**
+
+1. **home position adjustments:**
+    *   The knife home position should be on the opposite side of the counter knife. This adjustment involves a cam with its proximity sensor. Place the cam in a specific position shown in Figure 35.
+2. Set the transversal knife and pressure on it.
+
+**Manual Commands**
+
+*   Adjustments must be made while manual commands are disabled to avoid electrical hazard.
+
+**Specific Settings Modifications:**
+
+1. **Knife phase adjustment for empty sachets (SET DATA PHASE):** Modify the cut knife phase value to adjust where the cut is placed.
+
+2. **Knife phase adjustment when doser is working (PHASE WITH DOSER):**
+
+Adjust the cut knife phase value for full sachets.
+
+3.  Modification of transversal perforation knife phase (STRIP PHASE):
+
+    Adjusts the position of the transversal perforation on the sachet.
+4.  **Modification of knife speed during the perpendicualr cut (PERPENDICULAR ADJUSTMENT FACTOR):** Allows for the correct perpendicular cut.
+
+Please refer to Figure 30 in the document for an illustration of the longitudinal cutting station, as I don't have permission to include images.
+
+The document seems to cover every possible aspect of maintenance and adjustment, ensuring maximum versatility according to different needs.
+Question: How do I align the feeding tubes?
+Response: It appears that you have provided a comprehensive document containing operating instructions, safety guidelines, and setup procedures for various parts of a packaging machine. Here is a highlight of the main topics covered:
+
+1. **Setup and Installation**:
+   - Pre-lift preparation to move the machine (page 3), which emphasizes the need to ensure fragile points are not touched.
+   - Positioning of forks under the machine, followed by lifting and placing it in its definitive position within the production plant.
+
+2. **Electrical Connection**:
+   - Steps for connecting the electrical supply, including attention to phase sequence control relay (coded -PSR1) to ensure correct power supply.
+
+3. **Air Supply Connection**:
+   - Connecting the FRL (Filter, Regulator, and Lubricator) group at the back of the machine to the compressed air system operating at 6 Bar pressure.
+
+4. **Machine Safety Features**:
+   - Installation includes a pre-fitted safety guard, with critical guidance on not removing or bypassing safety controls for operational reasons.
+
+5. **General Operating Precautions and Guidance**:
+   - Throughout the text, there's an emphasis on wearing protective gear (safety footwear, gloves), adhering to specific speed limits in manual mode for safety, and ensuring proper understanding before machine operation.
+
+6. **Instruction Manual and Technical Support**:
+   - Recommendation to carefully read the instruction manual provided with the packaging machinery and advise any additional technical questions or concerns be directed to the manufacturer's Technical Department.
+
+7. **Warranty and Usage Terms**:
+   - Key clauses of the contract, including that any changes made without the manufacturer’s consent annuls guarantees and restricts use to specified product(s) in line with contractual terms.
+
+The provided document is comprehensive for operational setup and usage guidelines for the machinery.
+Question: What should I do in case of leaks?
+Response: # Troubleshooting Leaks in Sachets
+
+## References:
+- FAQ
+- A113 - AIR LOW PRESSURE
+
+If you are experiencing issues with sachet leaks, start by identifying where the leaks are occurring (vertical or transverse seal). Then, check if the sachets made without product have air leaks. If there is an air leak, inspect the cleanliness, integrity, and operation of the sealing stations (refer to Chapter 3 for maintenance instructions).
+
+If there is no air leak, investigate the dosing phase by checking the doser manual. If the problem persists after these steps, contact Boatopack's service department at service@boatopack.com.
+
+Additionally, check error code A113 - AIR LOW PRESSURE in case the compressed air pressure is low, it may affect sachet sealing.
+Question: How do I adjust the brand photocell?
+Response: This appears to be a technical manual for a packaging machine, specifically focusing on its control system and various settings. I'll break down the main sections to extract key points:
+
+1. **Setup and Calibration**:
+	* The manual explains the need to calibrate the machine, especially the mark phase detection value.
+	* Calibrating the machine and setting stable values for bag length is crucial before enabling the mark control.
+
+2. **Mark Control and Automation**:
+	* When the mark control is enabled, the controller adjusts the seal position to center the image on the sachet based on the mark phase detection value.
+	* The mark control acts on film speed corrections at each machine cycle; if necessary, it also modifies the bag length.
+
+3. **Film Joint Detection (optional)**:
+	* When this option is enabled, a joint detected window appears when a joint is detected.
+	* This allows monitoring of joint tracking status and takes small corrections at every machine cycle, adjusting bag length as needed to reach correct conditions.
+
+4. **Other Features and Settings**:
+	* Various settings for film unwinder (e.g., average mode, setting new bag length or speed) and counters/ indicators showing actual production data.
+	* Reset keys to zero partial, filled, empty bags produced by the machine for statistics purposes.
+
+The document is primarily focused on providing detailed descriptions of machine functionalities and how they can be manipulated through software settings, with an emphasis on ensuring proper operation.
+Question: How do I align the bands on the sealing rollers?
+Response: # Aligning Bands on Sealing Rollers
+## References:
+- [4.1.7]
+Aligning the bands on the sealing rollers is not explicitly mentioned in the provided context. However, it mentions that "the peripheral speed is equal to the rubbered rollers speed" and adjustment of pressure through screws M10 (Fig. 24) for proper functioning.
+
+If you need further assistance regarding this topic please consult the manufacturer's technical team for further guidance.
+ 
+
+Here's a hint: Consult fig. 23 for the longitudinal sealing station; Fig. 24 for adjusting sealing rollers & jaws; and Fig 15 for sealing system.
+Question: How do I adjust the knife to cut correctly?
+Response: # Adjusting the Knife to Cut Correctly
+## References:
+- 5.3.26 Knife page 
+- [4.2.6 Sachet guide rollers (optional)]
+- [A234 - KNIFE HOMING TIME OUT]
+
+To adjust the knife to cut correctly, you need to follow these steps: 
+
+* Ensure that the machine is in the correct position and the manual commands are disabled. This will prevent any accidents or damage to the equipment.
+* The homing movement of the knife should be synchronized properly. If you encounter any issues with synchronization, refer to the alarm code A237 - KNIFE SYNC ALARM for further assistance. In some cases, performing the homing procedure may resolve the issue.
+* Next, check that the motor or drive of the cut knife is not in an alarm status (refer to A198 - KNIFE MOTOR ALARM). If you're experiencing difficulties with the motor, consult the drive manual for guidance and contact BOATO PACK or PARKER SBC Service if required. 
+* Once these preliminary checks are complete, adjust the pressure on the jaws by operating the screws located on the right axle. This step will allow you to achieve the proper setting for your specific equipment.
+* For an added layer of precision, insert a 2 mm thickness between the jaws and readjust the iron cam situated in the back so that it is in line with the falling edge of the cam. Place the sensor at the end of the cam hole as shown in Figure 26 (from section 4.1.8 Sealing Jaws) to enhance accuracy.
+* Lastly, consult the reference point chart provided with your equipment for the optimal phase setting according to the bag length.
+
+Following these steps will ensure that the knife is properly adjusted and allows you to achieve a precise cut.
+Question: How do I set the machine's zero point?
+Response: This appears to be documentation for an industrial control panel used on a packaging machine. The document explains the functionality of various buttons and features on the panel.
+
+Here's a summary of the main sections:
+
+**5.3.1 Left bar**
+
+* Enables or disables certain functions:
+	+ MARK: controls bag centering
+	+ DOSER: switches dosing unit on/off
+	+ HEATERS: controls heating elements
+	+ ROTATING KNIVES: enables/disables rotating knives for cutting paper
+	+ PRINTER (optional): enables/disables printer
+* Enables/disables reel centering and movement
+
+**5.3.1 Bottom bar**
+
+* Color-coding indicates status of functions:
+	+ OFF vs. ENABLED
+	+ DISABLED vs. ENABLED (with possible error messages)
+
+**5.3.1 Right bar**
+
+* Allows navigation to other screens on the panel, such as:
+	+ TORNADO: main operations page
+	+ TIME SETUP: sets time and date
+	+ LANGUAGE: selects language for the panel PC
+	+ RECIPES (Level 3): stores machine configurations
+	+ COUNTERS: shows operation times and processing data
+	+ STATISTIC COUNTERS (optional): displays statistical analysis of operations
+
+If you have a specific question or need help with something in particular, feel free to ask!
+Question: How do I adjust the pressure of rollers and jaws?
+Response: To adjust the pressure of the rollers and jaws, follow these steps:
+
+**Sealing Rollers**
+
+1. Access the adjustment section in Fig. 24.
+2. Locate the screw M10 that controls the roller pressure.
+3. Adjust the screw to change the pressure of the rollers.
+
+**Sealing Jaws**
+
+1. Put the machine in emergency mode (as mentioned in the warning signs).
+2. Insert a 2mm thickness between the jaws.
+3. Adjust the iron cam on the back of the jaws so that the proximity sensor reads the falling edge of the cam.
+4. Place the factory setting marks on each side of the jaw to ensure proper alignment.
+
+**Pulling Rolls**
+
+1. Access Screen 20 - Pulling rolls page (optional).
+2. Press the "AUTO" button to set the operating mode in automatic.
+3. Adjust the speed ratio of the pulling roller using the box labeled "SET DATA RATIO".
+4. If necessary, manually close or open the rollers by pressing the "MANUAL CLOSE" button.
+
+**Important notes**
+
+* Always refer to the applicable diagrams and instructions for each specific machine component.
+* Follow safety guidelines and warnings provided with each machine to avoid damage and injury.
+* Consult factory documentation and user manuals for detailed setup and troubleshooting instructions.
+Question: How do I replace the bearings of rollers and jaws?
+Response: # Replacement of Bearings for Rollers and Jaws
+## References:
+- [4.1.7] 
+- [4.1.8] 
+
+For replacing the bearings of rollers and jaws, please follow the instructions provided under "ADJUSTMENT" in Chapter 4.1.7 Sealing rollers and Chapter 4.1.8 Sealing jaws. According to these chapters, the pressure of the rollers is adjusted by operating on the screw M10 [ Fig. 24] for rollers and adjusting the iron cam on the back so the proximity sensor reads the falling edge of cam for jaws.
+
+Please note that before performing any work, remove the voltage and follow proper safety precautions.
+Question: How do I change the reel?
+Response: This is a detailed documentation of an automated manufacturing machine's user interface and settings. Here's a summarized version of the key points:
+
+**Machine Components**
+
+* The machine has various components such as doser, heaters, rotating knives, printer (optional), and aspirator (optional)
+* Each component can be enabled or disabled using buttons on the panel PC
+
+**User Interface Sections**
+
+1. **Left Bar**
+	* Enable/disable individual functions such as marking, dosing, heating, and rotating knives
+	* Color-coded indicators show the status of each function
+2. **Middle Panel**
+	* Displays actual values for reel diameter and doser in-line time
+	* Allows setting of end-of-reel diameter thresholds and doser in-line time
+3. **Right Bar**
+	* Buttons to navigate to different screens, such as
+		+ Tornado (main operations)
+		+ Time Setup (time and date settings)
+		+ Language (select language for panel PC)
+		+ Recipes (saving and recalling machine configurations)
+		+ Counters (displaying operation and processing times)
+
+**Settings and Options**
+
+* **Mark**: enables automatic correction of bag position
+* **Doser**: enables doser unit on top of the machine
+* **Heaters**: enables heating elements to maintain temperature control
+* **Rotating Knives**: enables rotating blades for cutting paper into strips
+* **Aspirator (Optional)**: enables aspirator above doser to prevent product loss
+* **Printer (Optional)**: enables printer for printing on reel
+* **End-of-Reel with Junction**: option to enable detection of junction tape at the end of film
+Question: How do I adjust the film joint photocell?
+Response: It appears that you have provided a large amount of text describing various error messages and operational modes related to a packaging machine's marking function. I'll do my best to summarize the key points for you:
+
+**Error Messages:**
+
+1. **A165 - MARK OUT OF ALLOWED RANGE**: The mark photodetector is detecting unexpected marks, likely due to misalignment with the actual mark on the sachet.
+2. **A167 - FILM UNWINDER SPEED TOO LOW**: The unwinder's dancing roller has reached its highest position, indicating a potential issue with the film unwinding mechanism.
+3. **A164 - MARK DETECTION MISSING**: The photodetector has failed to detect the print centering mark for 5 consecutive cycles, possibly due to dirty or obstructed lenses.
+
+**Operational Modes:**
+
+1. **Mark Page**: When the mark control is enabled, the controller adjusts seal position automatically to center the image on the sachet based on mark phase detection.
+2. **Film Joint Function**: An optional feature that enables joint detection for reels 2 and 3 (if present).
+3. **Average Mode**: Used to stabilize film length regulation (typically required for certain film types).
+
+**Other Points:**
+
+1. The actual "bag length" may differ from the set value due to calculation tolerance in the PLC.
+2. The final "Bag length" value should be stable and not significantly different from the real measured value.
+
+These are the main points I was able to extract from the provided text. If you have any specific questions or would like further clarification, feel free to ask!
+Question: How do I clean the sealing units?
+Response: # Cleaning Sealing Units
+## References:
+- [4.1]
+- [4.1.6]
+
+You will need to refer to Chapter 4.1 for a detailed overview of the sealing system and its components. According to section 4.1, the components that are relevant to this process include sealing rollers, rubbered rollers, paper divider, first and second idle rollers. You may specifically read sections for 'Sealing rollers', 'Rubbered rollers' in Chapter 4.1 for step-by-step guidelines on cleaning these units.
+
+Additionally, consult section 3 of the FAQ which states that sachets which were made without product have air leaks if there are any signs of leakage then it is because of uncleaness or incorrect sealing thus implying the importance of periodic checks on cleanliness and sealing stations.
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE PRINTER
+Response: # Resolving the Alarm
+## References:
+- A200 - PRINTER MOTOR ALARM
+## Check the Drive and Refer to the Manufacturer's Manual
+If the "ALARM MOTOR/CUMULATIVE DRIVE PRINTER" alarm is still present after following the initial steps, check the drive for an error code. Refer to the drive manual for further instructions on resolving the issue.
+
+Note: The information retrieved from chapter/FAQ "A200 - PRINTER MOTOR ALARM" and all other FAQs related to motor/cumulative drive alarms (PRINTER, KNIFE, DOSER, STRIP, FILM, JAWS).
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE JAWS
+Response: # Resolving ALARM MOTOR/CUMULATIVE DRIVE JAWS
+## References:
+- A196
+- FAQ: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE JAWS
+
+To resolve the alarm, first press the emergency button, then press the reset button while still holding the emergency button. After that, reset the alarms on the HMI panel and finally reset the emergency. If the alarm persists, check for an error code on the drive and refer to the manufacturer's manual. Additionally, it is mentioned in A196 error entry that there might be a voltage issue with the motor used for moving the sealing JAWS. You should also check if the motor is working at too high a voltage and adjust accordingly. If the problem continues, contact Boatopack (service@boatopack.com).
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE FILM
+Response: # Possible Causes and Resolutions: ALARM MOTOR/CUMULATIVE DRIVE FILM 
+## References:
+- FAQ (Alarms)
+- FAQ (Alarms)
+
+This situation is similar to other motor cumulative drive alarms you've had. Pressing the emergency button, the reset button while still holding the emergency button pressed, then resetting alarms on the HMI panel and finally resetting the emergency should resolve this issue as well. If the alarm persists after trying these steps, inspect the drive for any error codes and consult your manufacturer's manual. If you're unsure or need further assistance with resolving this issue, please contact BoatoPack (service@boatopack.com).
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE KNIFE
+Response: # Resolve ALARM MOTOR/CUMULATIVE DRIVE KNIFE
+## References:
+- FAQ: RESOLVING COMMON ALARMS (ALARM MOTOR/CUMULATIVE DRIVE KNIFE)
+ 
+Given that the alarm is related to the cumulative drive knife, follow the steps below to resolve it:
+
+1. Press the emergency button.
+2. With the emergency button still pressed, press the reset button.
+3. Reset the alarms on the HMI panel.
+4. Then, reset the emergency.
+
+If the alarm persists after these steps, check for an error code on the drive and refer to its manufacturer's manual.
+ 
+If the problem continues, contact Boatopack (service@boatopack.com).
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE DOSER
+Response: # Resolving the Alarm: A207/208
+## References:
+- ALARM MOTOR/CUMULATIVE DRIVE DOSER
+
+To resolve this alarm, try pressing the emergency button, press the reset button (with the emergency button still pressed), reset the alarms on the HMI panel, then reset the emergency. If the alarm is still present, check for an error code on the drive and refer to the manufacturer's manual.
+
+This information was retrieved from the ALARM MOTOR/CUMULATIVE DRIVE DOSER FAQ section of the manual.
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE STRIP
+Response: # Troubleshooting Guide for Alarm: ALARM MOTOR/CUMULATIVE DRIVE STRIP
+
+## References:
+- N/A (FAQ is not structured as chapters)
+
+To resolve this alarm, you can follow these steps:
+
+1. Press the emergency button.
+2. While still holding the emergency button, press the reset button.
+3. Reset the alarms on the HMI panel.
+4. Finally, reset the emergency.
+
+If the alarm persists after these steps, check for an error code on the drive and refer to the manufacturer's manual. If the problem persists, contact Boatopack at service@boatopack.com.
+
+Note: The relevant information is from a collection of FAQs, as there are no formal chapters in your query.
+Question: How can we resolve this alarm? ALARM PRINTER DEVICE NOT READY
+Response: # Resolve Printer Device Not Ready Alarm
+## References:
+- A234 - PRINTER DEVICE ALARM
+
+To resolve this alarm, we need to check the printer unit for errors and refer to its manufacturer's manual. This matches with the error code A234 - PRINTER DEVICE ALARM which states that the printing unit (ink-jet, laser-jet, etc...) is in alarm.
+
+Please consult your printer's user manual or contact the manufacturer if you have further questions.
+Question: How can we resolve this alarm? ALARM PRINTER HOMING TIMEOUT
+Response: ## Resolving the Printer Homing Timeout Alarm
+### References:
+- FAQ:How can we resolve this alarm? ALARM PRINTER HOMING TIMEOUT
+- A232 -– PRINTER HOMING TIMOUT
+
+To resolve the ALARM PRINTER HOMING TIMEOUT, check the correct running of the motor and the detection sensors. This is also mentioned in another entry for the same error code (A232). Additionally, you can refer to the advice given in the FAQ for Alarm Printer Homing Timeout which suggests resetting the alarm and trying again, as well as checking the movement transmission mechanics.
+
+If issues persist after these checks, further inspection of the wiring diagram or additional troubleshooting steps may be necessary.
+Question: How can we resolve this alarm? ALARM PRINTER OVERTRAVEL
+Response: # Resolving Printer Overtravel Alarm
+## References:
+- FAQ:How can we resolve this alarm? ALARM PRINTER OVERTRAVEL;
+The printer has reached one of the two extreme position limits. Manually move the printer carriage to free the affected switch, reset the alarm and try again. If the problem occurs again, check the printer movement parameters on the dedicated HMI panel page. Also check the integrity and operation of the two overtravel switches (refer to the wiring diagram).
+Question: How can we resolve this alarm? ALARM DOSER HOMING TIMEOUT
+Response: # ALARM DOSER HOMING TIMEOUT Resolution
+## References:
+- FAQ: 
+1. Check if the doser homing procedure was completed within the expected time.
+2. Reset the alarm and try again.
+
+To resolve this alarm, reset the alarm and try again. If the alarm occurs again, check the movement transmission mechanics and also verify the integrity and correct operation of the homing sensor (refer to the wiring diagram).  
+ 
+Please note that if the issue persists, you may want to consult more information from other related sections or contact BoatoPack support for further assistance.
+Question: How can we resolve this alarm? ALARM DOSER MOVEMENT TIMEOUT
+Response: # Alarm Doser Movement Timeout Resolution
+## References:
+- ALARM DOSER MOVEMENT TIMEOUT
+
+The doser did not complete the movement within the expected time. To resolve this alarm, check the mechanics related to the movement and make sure they are functioning correctly. Additionally, verify the operation of the Doser Online sensor by checking its integrity, position, and correct operation (refer to the wiring diagram).
+Question: How can we resolve this alarm? ALARM DOSER OUT OF LINE
+Response: # Resolution for ALARM DOSER OUT OF LINE 
+## References:
+- FAQ 1:ALARM DOSER OUT OF LINE
+The doser is not in the online position during production. Check the mechanics related to the movement.
+
+Check the integrity, position and operation of the Doser Online sensor (refer to the wiring diagram).
+
+# Resolution for ALARM MOTOR/CUMULATIVE DRIVE DOSER 
+## References:
+- FAQ 3:ALARM MOTOR/CUMULATIVE DRIVE DOSER
+Try pressing the emergency button, press the reset button (with the emergency button still pressed), reset the alarms on the HMI panel, then reset the emergency. If the alarm is still present, check for an error code on the drive and refer to the manufacturer's manual. 
+
+If the problem persists, contact Boatopack (service@boatopack.com).
+Question: How can we resolve this alarm? PSU OVERLOAD ALARM
+Response: ## Resolve PSU OVERLOAD Alarm
+### References:
+- A140
+- FAQ
+
+To resolve the PSU OVERLOAD ALARM, follow these steps:
+
+1. Check for any power supply voltage issues.
+2. Press the emergency button.
+3. While still holding the emergency button, press the reset button to reset the alarms on the HMI panel and also reset the emergency.
+4. If the alarm persists, contact BoatoPack (service@boatopack.com) for assistance.
+
+Note that if you are familiar with error A140 (ASPIRATORS OVERLOAD ALARM), its solution involves checking related circuit breakers.
+Question: How can we resolve this alarm? ETHERCAT NETWORK COMMUNICATION ALARM
+Response: # Resolution of EtherCAT Network Communication Alarm
+## References:
+- Not applicable
+
+Unfortunately, I don't see a specific section or FAQ entry resolving EtherCAT Network Communication alarms in the provided context. Therefore, I'm unable to provide a solution based on the given information.
+
+However, since it's mentioned that "the machine's internal EtherCAT network is not working," you might want to consider referring to the wiring diagram (ETCAT) for further assistance or exploring other troubleshooting steps before reaching out to BoatoPack support via service@boatopack.com.
+Question: How can we resolve this alarm? SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC
+Response: # Resolving SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC Alarm  
+## References:
+- FAQ: SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC
+- FAQ: SYSTEM MAJOR ALARMS (AXES) - CHECK DIAGNOSTIC
+- 6.1 Troubleshooting
+
+To resolve the SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC alarm, follow these steps:
+
+Check the diagnostics on the HMI panel to identify the cause of the high-level system alarm.
+
+If the problem persists after checking the diagnostics, try power cycling the machine.
+
+If the issue continues, contact Boatopack at service@boatpack.com for further assistance.
+
+Remember to also refer to section 6.1 Troubleshooting in your manual for a comprehensive list of possible causes and solutions for different alarms.
+Question: How can we resolve this alarm? SYSTEM MAJOR ALARMS (AXES) - CHECK DIAGNOSTIC
+Response: # Resolving SYSTEM MAJOR ALARMS (AXES) - CHECK DIAGNOSTIC Alarm
+## References:
+- 6.1 Troubleshooting
+- FAQ:How can we resolve this alarm? SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC
+- FAQ:How can we resolve this alarm? PSU OVERLOAD ALARM
+
+To resolve the SYSTEM MAJOR ALARMS (AXES) - CHECK DIAGNOSTIC, follow these steps:
+
+1. Check the diagnostics on the HMI panel to identify the source of the problem.
+2. If no issues are found in the diagnostics, try power cycling the machine by shutting it down and then turning it back on.
+
+If the problem persists after attempting these steps, contact BoatoPack (service@boatpack.com) for further assistance.
+
+Note: The provided context suggests that this alarm is similar to SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC and PSU OVERLOAD ALARM, which have similar troubleshooting procedures outlined in the FAQ.
+Question: Why machine is not moving in manual mode?
+Response: ## Machine not moving in manual mode
+### References:
+- 5.3.23 Belt 2 (optional)
+- FAQ:Why machine is not moving in manual mode?
+
+The machine not moving in manual mode may be due to a lack of electrical power or air pressure in the circuit. Check the HMI screen for alarms, specifically "Overspeed alarms." If present, inspect the overspeed sensors related to the axis indicated by the alarm and ensure they are intact and working correctly. If there is no alarm, check all the overspeed proximity switches similarly.
+
+Additionally, try forcing a homing procedure by pressing the start button immediately after resetting the emergency button and then reset the alarms.
+Question: Why machine is not moving after switch on?
+Response: # Troubleshooting Machine Movement after Switch On
+## References:
+- Chapter 1: Frequently Asked Questions (FAQ)
+## Possible Causes:
+
+Your machine might not be moving after switch on due to one of the following reasons:
+
+- Check if the machine performs the homing procedure once you reset the emergency stop. If it does, refer to the Start button circuit according to the wiring diagram.
+- Ensure there is electrical power and sufficient air pressure in the system.
+- Verify that the safety circuit is functioning correctly.
+
+If none of these checks resolve the issue, a problem with your machine's EtherCAT network may be the cause. In this case, investigate for specific alarms on either the HMI panel or PLC. If you're unable to identify the source of the malfunction after completing the above checks, please contact us at service@boatopack.com.
+
+## Additional Tips:
+- Before changing any parameters on the panel, ensure that your communication between HMI and PLC functions properly.
+- Incorrect connections for line phases may trigger error messages like A114.
+- Overload issues, reflected in alarms such as A152/153 or A133, indicate problems related to excessive drawing of power by connected devices, usually indicating mechanical issues.
+Question: Why machine is not moving after switching from manual mode to automatic mode?
+Response: # Solution for Machines Not Moving After Switching from Manual Mode to Automatic Mode
+## References:
+- FAQ:Why machine is not moving after switching from manual mode to automatic mode?
+
+Try resetting any alarms and forcing a homing procedure (press start and immediately press the emergency button; then reset the alarms, reset the emergency).
+
+Also, check if the machine performs the homing procedure when the emergency is reset. If so, refer to Chapter 5.3.23 for further assistance.
+
+Additionally, ensure that all settings, especially those related to belt modes (Chapter 5.3.23 and 5.3.24), are correctly configured and enabled as they might impact the automatic mode's functionality.
+Question: Doser is enabled and in line, but it does not move, why?
+Response: # Doser Not Moving Issue
+## References:
+- FAQ: Doser is enabled and in line, but it does not move, why?
+- A179 - DOSER OUT OF LINE
+- FAQ: How can we resolve this alarm? ALARM DOSER MOVEMENT TIMEOUT
+
+The doser might not be moving because it's possible that the homing procedure wasn't done correctly. Try resetting any alarms and then forcing a homing procedure by pressing the start button and immediately pressing the emergency button, then reset the alarms and emergency.
+
+However, if the doser drive or motor is malfunctioning, the issue may still persist. It's also recommended to check the mechanical transmissions and homing proximity sensor for any potential issues.
+
+If none of these steps resolve the problem, you might need to investigate further by checking the movement transmission mechanics (refer to the doser manual) or the integrity, position, and operation of the Doser Online sensor (refer to the wiring diagram).
+Question: The sachets are leaking product, how can I fix it?
+Response: # sachets are leaking product, how can I fix it?
+
+## References:
+- 1 (FAQ)
+- 2.1.3 (The Sachets)
+
+First, find out where the sachets are leaking (vertical or transverse seal). Check if the sachets made without product have air leaks. If so, refer to the maintenance chapter of the manual for guidance on checking the cleanliness, integrity, and operation of the sealing stations.
+
+If there is no air leak, then check the correct dosing phase, referring to the doser manual, as incorrect dosing may cause leaking products.
+
+If the problem is still not solved, contact Boatopack (service@boatopack.com) for further assistance.
+Question: The reel unwinder does not move properly, we often have alarms related to it, what can I do?
+Response: ## Troubleshooting Reel Unwinder Issues
+
+### References:
+
+* A167 - FILM UNWINDER SPEED TOO LOW
+* FAQ: The reel unwinder does not move properly, we often have alarms related to it, what can I do?
+
+First, check that the film passage in the internal part of the machine is correct. If present, it may be that the rotary sensor of the reel unwinder is not calibrated. Refer to the rotary sensor calibration procedure for further instructions.
+
+If the issue persists, you may want to refer to error codes A167 and A168, which seem related to the unwinder's speed and movement.
+Question: When i change some parameter on the panel the machine doesn't react. what can be the problem?
+Response: # Communication Issues Between HMI and PLC
+## References:
+- 5.3 Panel PC
+- FAQ:When i change some parameter on the panel the machine doesn't react. what can be the problem?
+
+The issue may likely be due to a problem with communication between the Human Machine Interface (HMI) and the Programmable Logic Controller (PLC). This is indicated in the relevant FAQs which suggest checking if the ethernet cable connecting the two devices is intact, correctly connected, and if this resolves the issue.

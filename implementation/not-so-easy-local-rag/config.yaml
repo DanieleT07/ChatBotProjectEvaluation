@@ -6,7 +6,7 @@ embeddings_file: "embeddings/embeddings.json"
 ollama_model: "llama3.1"
 ollama_model_emebeding: "mxbai-embed-large"
 top_k: 7
-benchmark: False
+benchmark: True
 benchmark_response: "benchmark/response.txt"
 history: False
 benchmark_path: "benchmark/benchmark.yaml"
