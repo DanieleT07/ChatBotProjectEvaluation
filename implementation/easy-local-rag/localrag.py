@@ -14,12 +14,6 @@ YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
 
-benchmark = False
-if benchmark:
-    benchmark_path = "benchmark.yaml"
-    benchmark_content = yaml.safe_load(open(benchmark_path, 'r'))
-    benchmark_questions = benchmark_content['questions']
-
 config_path = "config.yaml"
 config = yaml.safe_load(open(config_path, 'r'))
 
@@ -33,6 +27,17 @@ vault_path = config['vault_file']
 vault_old_path = config['vault_old_file']
 ollama_model = config['ollama_model']
 ollama_api_key = config['ollama_api_key']
+
+# Benchmarking
+benchmark = config['benchmark']
+if benchmark:
+    benchmark_path = config['benchmark_path']
+    benchmark_content = yaml.safe_load(open(benchmark_path, 'r'))
+    benchmark_questions = benchmark_content['questions']
+    benchmark_response = config['benchmark_response']
+
+# This disables the context history
+history = config['history']
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
@@ -293,8 +298,8 @@ if benchmark:
         conversation_history = []
         print(NEON_GREEN + "Response: \n\n" + response + RESET_COLOR)
         response_list.append(response)
-        # write response_list to response.txt alternating with question
-        with open("response.txt", "a", encoding='utf-8') as f:
+        # write response_list to file alternating with question
+        with open(benchmark_response, "a", encoding='utf-8') as f:
             f.write("Question: " + question + "\n")
             f.write("Response: " + response + "\n")
 
@@ -306,6 +311,8 @@ while True:
         save_old_vault(vault_path, vault_content)
         break
     
+    if not history:
+        conversation_history = []
     response = ollama_chat(user_input, system_message, vault_embeddings_tensor, vault_content, args.model, conversation_history)
     print(NEON_GREEN + "Response: \n\n" + response + RESET_COLOR)
 

@@ -1,18 +1,22 @@
 ollama_api_base_url: "http://localhost:11434/v1"
 ollama_api_key: "llama3.1"
-vault_file: "vault.txt"
-vault_old_file: "vault_old.txt"
-embeddings_file: "embeddings.json"
+vault_file: "vault/vault.txt"
+vault_old_file: "vault/old/vault_old.txt"
+embeddings_file: "embeddings/embeddings.json"
 ollama_model: "llama3.1"
 ollama_model_emebeding: "mxbai-embed-large"
 top_k: 7
+benchmark: False
+benchmark_response: "benchmark/response.txt"
+history: False
+benchmark_path: "benchmark/benchmark.yaml"
 system_message: |-
  The following is an automatic system message:  
  You are a client assistance chatbot for BoatoPack. You will receive a question along with a context extracted from the manual of a packaging machine.  
 
  Understanding the Context
  The context may be structured in one of two ways:  
- 1. Chapter Format  
+ 1. Chapter Format
    - Chapter Number  
    - Chapter Title  
    - Chapter Text  
