@@ -66,18 +66,12 @@ def visualize_sentences(sentences):
 
 # Example usage
 sentences = [
-    "man",
-    "woman",
-    "male",
-    "female",
-    "king",
-    "queen",
-    "boy",
-    "girl",
+    "king", "queen", "man", "woman", "apple", "orange", "fruit", "dog", "cat", 
+    "car", "vehicle", "bicycle", "book", "library", "knowledge", "ocean", 
+    "water", "river", "happy", "joyful"
 ]
 
-
-'''    "Planet",
+''' "Planet",
     "Earth",
     "Moon",
     "Sun",

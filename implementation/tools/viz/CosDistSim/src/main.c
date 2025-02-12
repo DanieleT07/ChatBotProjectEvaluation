@@ -106,10 +106,27 @@ int main() {
         }
 
         for (int i = 0; i < pointCount; i++) {
-			float normalizedColor = (int)(0 + (points[i].color - mincolor) * (0 + 32) / (maxcolor - mincolor));
-			Color color = ColorFromHSV(normalizedColor, 1.0f, 1.0f);
+            if (maxcolor == mincolor) continue; // Prevent division by zero
+
+            float t = (points[i].color - mincolor) / (maxcolor - mincolor); // Normalize to [0,1]
+            
+            // Interpolate between two RGB colors
+            Color colorStart = { 255, 40, 40, 255 };
+            Color colorEnd = { 255, 150, 150, 255 };
+
+            Color color = {
+                (unsigned char)(colorStart.r + t * (colorEnd.r - colorStart.r)),
+                (unsigned char)(colorStart.g + t * (colorEnd.g - colorStart.g)),
+                (unsigned char)(colorStart.b + t * (colorEnd.b - colorStart.b)),
+                255
+            };
+
+            printf("RGB: (%d, %d, %d)\n", color.r, color.g, color.b); // Debug output
+
             DrawSphere(points[i].position, 0.2f, color);
         }
+
+
 
         DrawGrid(10, 1.0f);
         EndMode3D();
@@ -119,7 +136,6 @@ int main() {
             DrawText(points[i].label, (int)screenPos.x, (int)screenPos.y, 20, BLACK);
         }
         
-        DrawText("Use mouse to rotate view", 10, 10, 20, DARKGRAY);
         EndDrawing();
     }
     

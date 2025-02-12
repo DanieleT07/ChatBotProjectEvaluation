@@ -5,3 +5,5 @@
 - [Documento Esplorativo](/docs/expdoc.md)
 - [Tech Stack](/docs/techstack.md)
 - [API](/docs/dictionary/api.md)
+- [Valutazione LLM](/docs/llmval.md)
+- [Analisi dei costi](/docs/costAn.md)
