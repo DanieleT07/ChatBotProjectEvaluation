@@ -1,0 +1,228 @@
+Question: How do I align the bands?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I adjust the dosing phase?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I adjust the transverse cut?
+Total Evaluations: 2
+Plausible: 1 (50.00%)
+Partially Plausible: 1 (50.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I adjust the vertical cut?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I align the feeding tubes?
+Total Evaluations: 2
+Plausible: 0 (0.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 2 (100.00%)
+
+Question: What should I do in case of leaks?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I adjust the brand photocell?
+Total Evaluations: 2
+Plausible: 0 (0.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 2 (100.00%)
+
+Question: How do I align the bands on the sealing rollers?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I adjust the knife to cut correctly?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I set the machine's zero point?
+Total Evaluations: 2
+Plausible: 0 (0.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 2 (100.00%)
+
+Question: How do I adjust the pressure of rollers and jaws?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I replace the bearings of rollers and jaws?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How do I change the reel?
+Total Evaluations: 2
+Plausible: 0 (0.00%)
+Partially Plausible: 1 (50.00%)
+Not Plausible: 1 (50.00%)
+
+Question: How do I adjust the film joint photocell?
+Total Evaluations: 2
+Plausible: 0 (0.00%)
+Partially Plausible: 1 (50.00%)
+Not Plausible: 1 (50.00%)
+
+Question: How do I clean the sealing units?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE PRINTER
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE JAWS
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE FILM
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE KNIFE
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE DOSER
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM MOTOR/CUMULATIVE DRIVE STRIP
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM PRINTER DEVICE NOT READY
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM PRINTER HOMING TIMEOUT
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM PRINTER OVERTRAVEL
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM DOSER HOMING TIMEOUT
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM DOSER MOVEMENT TIMEOUT
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ALARM DOSER OUT OF LINE
+Total Evaluations: 2
+Plausible: 1 (50.00%)
+Partially Plausible: 1 (50.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? PSU OVERLOAD ALARM
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? ETHERCAT NETWORK COMMUNICATION ALARM
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? SYSTEM MAJOR ALARMS (GENERIC) - CHECK DIAGNOSTIC
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: How can we resolve this alarm? SYSTEM MAJOR ALARMS (AXES) - CHECK DIAGNOSTIC
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: Why machine is not moving in manual mode?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: Why machine is not moving after switch on?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: Why machine is not moving after switching from manual mode to automatic mode?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: Doser is enabled and in line, but it does not move, why?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: The sachets are leaking product, how can I fix it?
+Total Evaluations: 2
+Plausible: 1 (50.00%)
+Partially Plausible: 1 (50.00%)
+Not Plausible: 0 (0.00%)
+
+Question: The reel unwinder does not move properly, we often have alarms related to it, what can I do?
+Total Evaluations: 2
+Plausible: 2 (100.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 0 (0.00%)
+
+Question: When i change some parameter on the panel the machine doesn't react. what can be the problem?
+Total Evaluations: 2
+Plausible: 0 (0.00%)
+Partially Plausible: 0 (0.00%)
+Not Plausible: 2 (100.00%)
+
