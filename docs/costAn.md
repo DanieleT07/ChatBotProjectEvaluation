@@ -43,5 +43,5 @@ Segue una tablella con le specifiche necessarie a eseguire un [LLM](/docs/dictio
 
 La rag è un processo meno intensivo e può essere eseguito con meno risorse in un server locale, considerando anche che deve contenere tutta la documentazione che si vuole che sia disponibile tramite il chatbot.
 
-
-
+---
+[Home](/indice.md) [Dizionario](/docs/dictionary/indice.md)

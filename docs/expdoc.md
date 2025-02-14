@@ -38,3 +38,6 @@ Spicca molto Amazon, essendo tralatro proprietaria di [*AWS*](https://aws.amazon
 ## Implementazione
 
 L'implementazione ideata per questo progetto può essere vista qui: [Tech-Stack](/docs/techstack.md)
+
+---
+[Home](/indice.md) [Dizionario](/docs/dictionary/indice.md)

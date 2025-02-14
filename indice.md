@@ -6,3 +6,4 @@
 - [Tech Stack](/docs/techstack.md)
 - [API](/docs/api.md)
 - [Analisi dei costi](/docs/costAn.md)
+- [Lista dei software inclusi](/implementation/README.md)

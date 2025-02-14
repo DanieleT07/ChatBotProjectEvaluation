@@ -57,7 +57,7 @@ Esempio di risposta:
 #### Codici di stato
 
 - `200`: Risposta avvenuta con successo
-- `500`: Errore del server (incluso nel dettaglio della risposta)
+- `500`: Errore del server (dettagli inclusi nella risposta)
 
 ### Salvataggio dello stato
 
@@ -181,3 +181,5 @@ L'API restituisce errori nel seguente formato:
     "detail": "Messaggio di errore che descrive il problema"
 }
 ```
+---
+[Home](/indice.md) [Dizionario](/docs/dictionary/indice.md)

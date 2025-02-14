@@ -18,6 +18,6 @@ def process_text(file_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script.py <file_path>")
+        print("Usage: python refactor.py <file_path>")
     else:
         process_text(sys.argv[1])
