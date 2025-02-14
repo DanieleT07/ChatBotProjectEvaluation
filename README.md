@@ -4,8 +4,11 @@
 
 Questo studio si pone l'obbiettivo di valutare la possibilità di implementazione di un [chatbot](/docs/dictionary/chatbot.md) per l'assistenza clienti
 
-Lo studio verrà svolto nel corso di due settimane.
+Lo studio verrà svolto nel corso di due settimane (80 ore).
 Se possibile si proverà ad implementare un chatbot per esplorare l'utilità di questo sistema.
+
+> [!IMPORTANT]  
+> Se per qualsiasi motivo sei interessato a questo progetto, contattami alla mail [danieletoniolo7@gmail.com](mailto:danieletoniolo7@gmail.com)
 
 [Indice](/indice.md)
 
