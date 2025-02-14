@@ -109,3 +109,6 @@ applications, and to alter it and redistribute it freely, subject to the followi
   as being the original software.
 
   3. This notice may not be removed or altered from any source distribution.
+
+---
+[Home](/indice.md) [Dizionario](/docs/dictionary/indice.md)
