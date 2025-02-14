@@ -11,26 +11,28 @@ Se possibile si proverà ad implementare un chatbot per esplorare l'utilità di 
 
 ## Obiettivi
 
-- [ ] Scrivere un [documento esplorativo](/docs/expdoc.md) delle potenzialità del sistema.
-- [ ] Identificare le tecnologie più adatte al sistema.
-- [ ] Definire un [Tech-Stack](/docs/dictionary/tech-stack.md) per il sistema.
-- [ ] Implementare un sistema funzionante.
+- [X] Scrivere un [documento esplorativo](/docs/expdoc.md) delle potenzialità del sistema.
+- [X] Identificare le tecnologie più adatte al sistema.
+- [X] Definire un [Tech-Stack](/docs/techstack.md) per il sistema.
+- [X] Implementare un sistema funzionante.
 
 ## Contatti
 
 ### Stagista responsabile dello studio
 Daniele T.
-- [Github](https://github.com/DanieleT07)
-- [Email](mailto:danieletoniolo7@gmail.com)
+> [Github: https://github.com/DanieleT07](https://github.com/DanieleT07)
+ 
+> [Email: danieletoniolo7@gmail.com](mailto:danieletoniolo7@gmail.com)
 
 ### Tutor di stage
 Michele T.
-- [Email](mailto:usa3@boatopack.com)
+> [Email: usa3@boatopack.com](mailto:usa3@boatopack.com)
 
 ### Azienda ospitante
 Boatopack
-- [Website](https://www.boatopack.com/)
-- [Email](mailto:info@boatopack.com)
+> [Website: https://www.boatopack.com/](https://www.boatopack.com/)
+ 
+> [Email: info@boatopack.com](mailto:info@boatopack.com)
 
 ---
 [Home](/indice.md) [Dizionario](/docs/dictionary/indice.md)

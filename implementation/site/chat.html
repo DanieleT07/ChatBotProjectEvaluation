@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document Chat</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 style="font-size: 20px; font-weight: 600; margin: 0;">Document Chat</h1>
+        <p style="margin: 4px 0 0; color: var(--color-fg-muted);">Ask questions about your documents</p>
+    </header>
+
+    <div class="main-container">
+        <main class="main-content">
+            <div class="messages-container">
+                <div id="chat-messages">
+                    <div class="message">
+                        <div class="message-header">
+                            <div class="message-avatar"></div>
+                            <span>Assistant</span>
+                        </div>
+                        <div class="markdown-body">
+                            <p>Welcome! I can help you with your documents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="user-input" 
+                    class="github-style-input"
+                    placeholder="Type your message..."
+                >
+                <div style="display: flex; gap: 8px;">
+                    <button id="send-button" class="github-style-btn primary">
+                        Send
+                    </button>
+                    <button id="clear-button" class="github-style-btn">
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <button id="sidebar-toggle" class="github-style-btn sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <h2 style="margin-bottom: 16px; font-size: 16px;">Related Context</h2>
+                <div id="context-content" class="markdown-body" style="font-size: 14px;"></div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+    <script src="script.js"></script>

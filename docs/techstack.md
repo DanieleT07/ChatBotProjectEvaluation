@@ -48,7 +48,6 @@ A[Sito]
 7. Il Manager restituisce la risposta all'utente.
 
 L'[LLM](/docs/dictionary/llm.md) in questione potrebbe essere ospitata su un server locale o utilizzata tramite [API](/docs/dictionary/api.md).
-Per ulteriori informazioni, vedi [Valutazione LLM](/docs/llmval.md)
 
 ---
 [Home](/indice.md) [Dizionario](/docs/dictionary/indice.md)
